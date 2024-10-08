@@ -4,6 +4,7 @@ import {
   Input,
   Output,
   input,
+  output,
   EventEmitter,
 } from '@angular/core';
 
@@ -17,7 +18,7 @@ export class UserComponent {
   @Input({ required: true }) id!: string;
   @Input({ required: true }) avatar!: string;
   @Input({ required: true }) name!: string;
-  @Output() select = new EventEmitter();
+  @Output() select = new EventEmitter<string>();
 
   get imagePath() {
     return 'assets/users/' + this.avatar;
@@ -26,6 +27,7 @@ export class UserComponent {
   // Signal Method
   // avatar = input.required<string>();
   // name = input.required<string>();
+  // select = output<string>();
 
   // imagePath = computed(() => {
   //   return 'assets/users/' + this.avatar();
