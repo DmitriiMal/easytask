@@ -22,10 +22,6 @@ export class TasksComponent {
     return this.tasksService.getUserTasks(this.userId);
   }
 
-  onCompleteTask(id: string) {
-    this.tasksService.removeTask(id);
-  }
-
   onStartAddTask() {
     this.isAddingTask = true;
   }
@@ -33,15 +29,4 @@ export class TasksComponent {
   onCloseAddTask() {
     this.isAddingTask = false;
   }
-
-  //   onAddTask(taskData: NewTaskData) {
-  //     // this.tasks.unshift({
-  //     //   id: new Date().getTime().toString(),
-  //     //   userId: this.userId,
-  //     //   title: taskData.title,
-  //     //   summary: taskData.summary,
-  //     //   dueDate: taskData.date,
-  //     // });
-  //     this.isAddingTask = false;
-  //   }
 }
