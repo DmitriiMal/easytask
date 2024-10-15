@@ -14,7 +14,9 @@ import { TasksService } from './tasks.service';
 export class TasksComponent {
   @Input({ required: true }) userId!: string;
   @Input({ required: true }) name!: string;
-  isAddingTask = false;
+  // isAddingTask = false;
+  triggerTask = '';
+  selectedTaskId?: string;
 
   constructor(private tasksService: TasksService) {}
 
@@ -23,10 +25,15 @@ export class TasksComponent {
   }
 
   onStartAddTask() {
-    this.isAddingTask = true;
+    this.triggerTask = 'add';
   }
 
   onCloseAddTask() {
-    this.isAddingTask = false;
+    this.triggerTask = '';
+  }
+
+  onSelectTask(id: string) {
+    this.selectedTaskId = id;
+    this.triggerTask = 'edit';
   }
 }

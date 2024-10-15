@@ -1,5 +1,12 @@
-@if(isAddingTask){
-<app-new-task [userId]="userId" (close)="onCloseAddTask()"></app-new-task>
+<!-- @if(isAddingTask){ -->
+<!-- @if(triggerTask !== ''){ -->
+@if(triggerTask === 'add' || triggerTask === 'edit'){
+<app-new-task
+  [triggerTask]="triggerTask"
+  [selectedTaskId]="selectedTaskId!"
+  [userId]="userId"
+  (close)="onCloseAddTask()"
+></app-new-task>
 }
 <section id="tasks">
   <header>
@@ -11,7 +18,7 @@
   <ul>
     @for(task of selectedUserTasks; track task.id){
     <li>
-      <app-task [task]="task"></app-task>
+      <app-task (selectedTask)="onSelectTask($event)" [task]="task"></app-task>
     </li>
     }
   </ul>

@@ -3,7 +3,7 @@ import { type NewTaskData } from './task/task.model';
 
 @Injectable({ providedIn: 'root' })
 export class TasksService {
-  private tasks = [
+  public tasks = [
     {
       id: 't1',
       userId: 'u1',
@@ -35,15 +35,6 @@ export class TasksService {
     if (tasks) {
       this.tasks = JSON.parse(tasks);
     }
-
-    // this.editTask(
-    //   {
-    //     title: 'Test2',
-    //     summary: 'Test2',
-    //     date: '2024-10-15',
-    //   },
-    //   't1'
-    // );
   }
 
   getUserTasks(userId: string) {
