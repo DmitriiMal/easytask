@@ -38,9 +38,9 @@ span {
   margin-bottom: 1rem;
 }
 @media (max-width: 768px) {
-  div {
+  /* .mb-05 {
     margin-bottom: 0.5rem;
-  }
+  } */
 
   button {
     min-height: 3.15rem;
