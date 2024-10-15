@@ -35,6 +35,15 @@ export class TasksService {
     if (tasks) {
       this.tasks = JSON.parse(tasks);
     }
+
+    // this.editTask(
+    //   {
+    //     title: 'Test2',
+    //     summary: 'Test2',
+    //     date: '2024-10-15',
+    //   },
+    //   't1'
+    // );
   }
 
   getUserTasks(userId: string) {
@@ -50,6 +59,13 @@ export class TasksService {
       dueDate: TaskData.date,
     });
     this.saveTasks();
+  }
+
+  editTask(TaskData: NewTaskData, taskId: string) {
+    const task = this.tasks.filter((task) => task.id === taskId);
+    task[0].title = TaskData.title;
+    task[0].summary = TaskData.summary;
+    task[0].dueDate = TaskData.date;
   }
 
   removeTask(id: string) {

@@ -32,6 +32,7 @@ This project involves developing a web application using the Laravel framework, 
     <a href="https://angular.dev/" target="_blank"><img src="https://img.shields.io/badge/Angular-%23E90463.svg?style=for-the-badge&logo=angular&logoColor=white" alt="Angular"></a>
     <a href="https://www.w3schools.com/css/" target="_blank"><img src="https://img.shields.io/badge/css-%231A6FB4.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"></a>
     <a href="https://jquery.com" target="_blank"><img src="https://img.shields.io/badge/html-%23E75E24.svg?style=for-the-badge&logo=html5&logoColor=white" alt="html5"></a>
+    <a href="https://netlify.com" target="_blank"><img src="https://img.shields.io/badge/netlify-%2332E6E2.svg?style=for-the-badge&logo=netlify&logoColor=white" alt="Netlify"></a>
   
   
 </p>
